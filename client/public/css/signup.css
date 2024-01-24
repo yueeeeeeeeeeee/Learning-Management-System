@@ -1,0 +1,7 @@
+#name-error,
+#email-error,
+#password-error,
+#confirm-password-error {
+  display: none;
+  color: red;
+}
