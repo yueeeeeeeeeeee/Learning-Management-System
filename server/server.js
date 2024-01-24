@@ -59,7 +59,7 @@ app.post("/signup", async (req, res) => {
     const hashedPasword = await bcrypt.hash(password, 10);
 
     // CREATE UNIQUE INDEXES ON USERNAME AND EMAIL
-    await userCollection.createIndex({ username: 1 }, { unique: true });
+    await userCollection.createIndex({ name: 1 }, { unique: true });
     await userCollection.createIndex({ email: 1 }, { unique: true });
 
     // INSERT THE USER INTO THE DATABASE
