@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  /* ============= BACKGROUND COLORS =============== */
+  --brightblue: rgb(76%, 180%, 255%);
+  
+}

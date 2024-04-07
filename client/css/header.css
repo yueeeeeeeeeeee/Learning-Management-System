@@ -1,0 +1,86 @@
+@import url("style.css");
+
+* {
+  /* border: 1px solid black; */
+}
+
+.lms__logo {
+  max-width: 10vh;
+  width: 8vh;
+  height: 8vh;
+}
+
+.header__container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 13vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.image__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+.nav__container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transform: translate(-50%, 30%);
+  top: 50%;
+  left: 50%;
+  background: rgba(142, 142, 142, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 3vh;
+  max-width: 40vh;
+  width: 35vh;
+  border-radius: 1vh;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: black;
+  padding: 1vh;
+  transition: color 0.15s, text-decoration 0.15s;
+}
+
+.login__signup__container {
+  display: flex;
+  gap: 1vh;
+}
+
+.login__link,
+.signup__link {
+  text-decoration: none;
+  font-size: 1.5vh;
+}
+
+.login__link {
+  background-color: lightgrey;
+  padding: 1.3vh;
+  border-radius: 0.5vh;
+  color: black;
+}
+
+.signup__link {
+  background-color: rgb(0, 145, 249);
+  padding: 1.3vh;
+  border-radius: 0.5vh;
+  color: white;
+}
+
+
+/* ============ HOVER CSS ============= */
+
+.nav__link:hover {
+  color: rgb(202, 214, 31);
+  text-decoration: underline;
+}

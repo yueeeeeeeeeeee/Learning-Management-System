@@ -7,12 +7,13 @@ Install All Dependencies
 npm install
 
 Run Vite
-npm run dev
+npm run dev 
 
 /* ====== Server Side Folder ====== */
 
 Initialize Server
 npm init -y
+npm i express
 
 Dependencies Needed For This Project (Currently)
 npm install bcryptjs compression concurrently cors dotenv express formidable googleapis gridfs-stream jsonwebtoken mongodb nodemailer nodemon openai uuid stripe
