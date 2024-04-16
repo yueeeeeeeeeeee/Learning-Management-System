@@ -1,7 +1,118 @@
-#name-error,
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Raleway:wght@400;500;600;700&display=swap");
+
+@import url("style.css");
+
+main {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border: 1px solid black;
+  padding: 5vh;
+  border-radius: 1vh;
+  border: 1px solid black;
+  max-width: 40vh;
+  width: 40vh;
+  z-index: -1;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+
+#signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.input__container {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: var(--Raleway500);
+}
+
+.input__field {
+  padding: 2vh;
+  border-radius: 0.5vh;
+  border: 1px solid black;
+  max-width: 30vh;
+  width: 30vh;
+}
+
+.signup__button__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5vh;
+  cursor: pointer;
+  margin-top: 3vh;
+}
+
+#submit-button {
+  max-width: 15vh;
+  width: 15vh;
+  padding: 1.5vh;
+  border-radius: 0.5vh;
+  border: none;
+  background: var(--Dark);
+  color: white;
+  cursor: pointer;
+  font-family: var(--Raleway);
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.google__icon {
+  font-size: 4vh;
+}
+
+.login__redirect {
+  text-decoration: none;
+  transition: color 0.15s, text-decoration 0.15s, transform 0.15s;
+}
+
+/* ============ HOVER CSS ============= */
+
+.login__redirect:hover {
+  color: rgb(202, 214, 31);
+  text-decoration: underline;
+  transform: translateY(-1px);
+}
+
+#submit-button:hover {
+  background: var(--DarkGold);
+  box-shadow: 0 0 10px 0 var(--DarkGold);
+}
+
+/* ============= RESPONSIVE DESIGN ============= */
+
+@media screen and (min-width: 745px) {
+  main {
+    max-width: 50vh;
+    width: 50vh;
+  }
+
+  .input__form {
+    max-width: 40vh;
+    width: 40vh;
+  }
+}
+
+#username-error,
 #email-error,
 #password-error,
 #confirm-password-error {
   display: none;
   color: red;
+  margin-top: 0.5vh;
+  font-size: 1.5vh;
 }

@@ -1,33 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Form</title>
-    <link rel="shortcut icon" href="#" />
-    <link rel="stylesheet" href="../public/css/signup.css">
-</head>
-<body>
-    <form id="signup-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br>
-        <p id="name-error">Name is required</p> <!-- ERROR MESSAGE HERE -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br>
-        <p id="email-error">Email is required</p> <!-- ERROR MESSAGE HERE -->
+    <!-- ========= LINK CSS ========= -->
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br>
-        <p id="password-error">Password is required</p> <!-- ERROR MESSAGE HERE -->
+    <link rel="stylesheet" href="../client/css/signup.css" />
 
-        <label for="confirm-password">Confirm Password:</label>
-        <input type="password" id="confirm-password" name="confirm-password"><br>
-        <p id="confirm-password-error">Confirm Password is required</p> <!-- ERROR MESSAGE HERE -->
+    <link rel="stylesheet" href="../client/css/header.css" />
 
-        <input type="submit" id="submit-button" value="Sign Up">
-    </form>
+    <!-- ========= LINK BOX ICONS ========= -->
 
-    <script type="module" src="js/signup.js"></script>
-</body>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ======== FONT AWESOME ======== -->
+    <script
+      src="https://kit.fontawesome.com/21bf2f8b90.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ======== FAVICON ========  -->
+    <link rel="icon" href="../client/image/book-reader-regular-24(2).png" />
+
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <!-- HEADER SECTION  -->
+
+    <header>
+      <section class="header__container">
+        <!-- HAMBURGER AND ICON CONTAINER  -->
+        <div class="image__container">
+          <div class="hamburger__container" id="hamburger__container">
+            <i class="bx bx-menu-alt-left open__nav" id="open__nav"></i>
+          </div>
+
+          <div class="logo__container">
+            <i class="bx bx-book-reader lms__logo"></i>
+          </div>
+        </div>
+
+        <!-- NAV CONTAINER  -->
+
+        <div class="nav__container" id="nav__container">
+          <a class="nav__link" href="index.html">Home</a>
+          <a class="nav__link" href="about.html">About Us</a>
+          <a class="nav__link" href="contact.html">Contact Us</a>
+          <a class="nav__link" href="news_blog.html">News & Blog</a>
+        </div>
+
+        <!-- LOGIN AND SIGNUP BUTTONS  -->
+
+        <div class="login__signup__container">
+          <a class="login__link" href="login.html">Log in</a>
+          <a class="signup__link" href="signup.html">Sign Up</a>
+        </div>
+      </section>
+    </header>
+
+    <!-- SIGNUP SECTION  -->
+
+    <main>
+      <section class="main__container">
+        <h1>Registration</h1>
+        <div class="signup__container">
+          <form id="signup-form">
+            <div class="input__container">
+              <label for="name">Username:</label>
+
+              <input
+                type="text"
+                id="username"
+                class="input__field"
+                placeholder="Username"
+              />
+              <p id="username-error">Username is required</p>
+            </div>
+
+            <div class="input__container">
+              <label for="email">Email:</label>
+
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                class="input__field"
+              />
+
+              <p id="email-error">Email is required</p>
+            </div>
+
+            <div class="input__container">
+              <label for="password">Password:</label>
+
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                class="input__field"
+              />
+
+              <p id="password-error">Password is required</p>
+            </div>
+
+            <div class="input__container">
+              <label for="confirm-password">Confirm Password:</label>
+
+              <input
+                type="password"
+                id="confirm-password"
+                placeholder="Confirm Password"
+                class="input__field"
+              />
+
+              <p id="confirm-password-error">
+                Password Confirmation is required
+              </p>
+            </div>
+          </form>
+          <div class="signup__button__container">
+            <input type="submit" id="submit-button" value="Sign Up" />
+            <i
+              class="bx bxl-google google__icon"
+              style="color: #2b2323"
+              title="Sign up using google account"
+            ></i>
+
+            <a href="login.html" class="login__redirect"
+              >Already have an account?</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- JAVASCRIPT ACCESS -->
+
+    <script src="../client/js/signup.js"></script>
+    <script src="../client/js/header.js"></script>
+  </body>
 </html>

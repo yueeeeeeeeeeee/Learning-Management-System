@@ -1,12 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Raleway:wght@400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--Raleway);
 }
 
 :root {
-
-  /* ============= BACKGROUND COLORS =============== */
+  /* ====== COLORS ====== */
   --brightblue: rgb(76%, 180%, 255%);
-  
+  --DarkGold: #b67d43;
+  --Dark: hsl(228, 16%, 12%);
+
+  /* ====== FONT ====== */
+  --Raleway: "Raleway", sans-serif;
+  --Josefin: "Josefin Sans", sans-serif;
+
+  /* ====== FONT WEIGHT ====== */
+  --Raleway400: 400;
+  --Raleway700: 700;
+  --Raleway500: 500;
+  --Raleway600: 600;
+}
+
+body {
 }

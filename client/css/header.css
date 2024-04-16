@@ -1,13 +1,15 @@
 @import url("style.css");
 
-* {
-  /* border: 1px solid black; */
+header {
+  background: rgba(45, 45, 45, 0.5);
+  backdrop-filter: blur(5px);
 }
 
-.lms__logo {
-  max-width: 10vh;
-  width: 8vh;
-  height: 8vh;
+.image__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1vh;
 }
 
 .header__container {
@@ -15,18 +17,22 @@
   position: relative;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 13vh;
+  justify-content: space-between;
+  padding: 2vh;
   font-family: "Roboto", sans-serif;
+  margin-inline: 3vh;
+  color: white;
 }
 
-.image__container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.open__nav {
+  cursor: pointer;
+  font-size: 3vh;
 }
 
-
+.lms__logo {
+  cursor: pointer;
+  font-size: 3vh;
+}
 
 .nav__container {
   display: none;
@@ -37,19 +43,24 @@
   transform: translate(-50%, 30%);
   top: 50%;
   left: 50%;
-  background: rgba(142, 142, 142, 0.1);
-  backdrop-filter: blur(5px);
+  background: rgba(45, 45, 45, 0.5);
   padding: 3vh;
   max-width: 40vh;
   width: 35vh;
   border-radius: 1vh;
+  border: none;
+  gap: 2vh;
+  z-index: 1;
+  backdrop-filter: blur(5px);
 }
 
 .nav__link {
   text-decoration: none;
   color: black;
-  padding: 1vh;
-  transition: color 0.15s, text-decoration 0.15s;
+  transition: color 0.15s, text-decoration 0.15s, transform 0.15s;
+  width: max-content;
+  height: max-content;
+  color: white;
 }
 
 .login__signup__container {
@@ -77,10 +88,40 @@
   color: white;
 }
 
-
 /* ============ HOVER CSS ============= */
 
 .nav__link:hover {
   color: rgb(202, 214, 31);
   text-decoration: underline;
+  transform: translateY(-1px);
+}
+
+/* ============= RESPONSIVE DESIGN ============= */
+
+@media screen and (min-width: 745px) {
+  .nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    transform: translate(20%, 0%);
+    gap: 3vh;
+    padding: 1vh;
+    background: none;
+    position: static;
+    font-size: 2vh;
+    max-width: max-content;
+    width: max-content;
+    backdrop-filter: none;
+  }
+
+  .hamburger__container {
+    display: none;
+  }
+
+  .login__link,
+  .signup__link {
+    text-decoration: none;
+    font-size: 2vh;
+  }
 }

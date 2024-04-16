@@ -12,25 +12,25 @@ const validateEmail = (email) => {
 // CREATE A FUNCTION THAT CAN VALIDATE THE FORM
 const validateSignupForm = (event) => {
   // RESET THE ERROR MESSAGE
-  document.getElementById("username-error").style.display = "none";
+  document.getElementById("name-error").style.display = "none";
   document.getElementById("email-error").style.display = "none";
   document.getElementById("password-error").style.display = "none";
   document.getElementById("confirm-password-error").style.display = "none";
 
   // GETTING THE VALUES FROM THE FORM
-  const username = document.getElementById("username").value;
+  const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("confirm-password").value;
 
   // CHECKING IF THE NAME IS EMPTY
-  if (username.trim() === "") {
-    document.getElementById("username-error").style.display = "block";
+  if (name === "") {
+    document.getElementById("name-error").style.display = "block";
     return false;
   }
 
   // CHECKING IF THE EMAIL IS EMPTY
-  if (email === " ") {
+  if (email === "") {
     document.getElementById("email-error").style.display = "block";
     return false;
   } else if (!validateEmail(email)) {
@@ -41,19 +41,18 @@ const validateSignupForm = (event) => {
   }
 
   // CHECKING IF THE PASSWORD IS EMPTY
-  if (password === " ") {
+  if (password === "") {
     document.getElementById("password-error").style.display = "block";
     return false;
   } else if (password.length < 8) {
     document.getElementById("password-error").style.display = "block";
     document.getElementById("password-error").textContent =
-      "Passowrd must contain atleast 8 characters";
-  } else if (
-    !/(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/.test(password)
-  ) {
-    document.getElementById("password-error").innerHTML =
-      "Password Format Incorrect<br>" + "Example: Secure1$";
+      "Password must be at least 8 characters";
+    return false;
+  } else if (!/[A-Z]/.test(password)) {
     document.getElementById("password-error").style.display = "block";
+    document.getElementById("password-error").textContent =
+      "Password must contain at least one uppercase letter";
     return false;
   }
 
@@ -67,6 +66,7 @@ const validateSignupForm = (event) => {
       "Password does not match";
     return false;
   }
+
   return true;
 };
 
@@ -81,7 +81,7 @@ const submitForm = async (event) => {
   }
 
   // GETTING THE VALUES FROM THE FORM
-  const username = document.getElementById("username").value;
+  const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
@@ -91,7 +91,7 @@ const submitForm = async (event) => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ username, email, password }),
+    body: JSON.stringify({ name, email, password }),
   });
 
   // GETTING THE RESPONSE FROM THE SERVER
@@ -113,3 +113,8 @@ const submitForm = async (event) => {
 signupButton.addEventListener("click", (event) => {
   submitForm(event);
 });
+
+// WE GOT THREE FUNCTIONS
+// 1. validateEmail
+// 2. validateSignupForm
+// 3. submitForm

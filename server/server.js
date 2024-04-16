@@ -48,10 +48,10 @@ const userCollection = database.collection("Users");
 app.post("/signup", async (req, res) => {
   try {
     // GET THE VALUES FROM THE CLIENT (JSON.stringify)
-    const { name, email, password } = req.body;
+    const { username, email, password } = req.body;
 
     // VALIDATE FORM DATA
-    if (!name || !email || !password) {
+    if (!username || !email || !password) {
       return res.status(400).json({ message: "Invalid form data" });
     }
 
@@ -59,12 +59,12 @@ app.post("/signup", async (req, res) => {
     const hashedPasword = await bcrypt.hash(password, 10);
 
     // CREATE UNIQUE INDEXES ON USERNAME AND EMAIL
-    await userCollection.createIndex({ name: 1 }, { unique: true });
+    await userCollection.createIndex({ username: 1 }, { unique: true });
     await userCollection.createIndex({ email: 1 }, { unique: true });
 
     // INSERT THE USER INTO THE DATABASE
     const insert = await userCollection.insertOne({
-      name,
+      username,
       email,
       password: hashedPasword,
     });
