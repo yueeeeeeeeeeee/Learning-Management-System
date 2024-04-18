@@ -45,7 +45,7 @@ const database = client.db("lms-management-system");
 const userCollection = database.collection("Users");
 
 /* ========== EXPRESS SIGNUP CONFIGURATION ========== */
-app.post("/signup", async (req, res) => {
+app.post("/client/signup", async (req, res) => {
   try {
     // GET THE VALUES FROM THE CLIENT (JSON.stringify)
     const { username, email, password } = req.body;
@@ -78,7 +78,7 @@ app.post("/signup", async (req, res) => {
   } catch (error) {
     console.error("Error handling form submission:", error);
 
-    // CHECK IF THE ERROR IS A DUPLICATE KEY ERROR
+    // CHECK IF THE ERROR IS A DUPLICATE KEY ERROR IN OTHER TERMS TO CHECK IF THE USER ALREADY EXISTS
     if (error.code === 11000) {
       return res.status(400).json({ message: "User already exists" });
     } else {
