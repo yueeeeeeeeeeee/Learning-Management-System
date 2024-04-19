@@ -2,6 +2,10 @@
 
 @import url("style.css");
 
+* {
+  /* border: 1px solid black; */
+}
+
 .main__container {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -11,8 +15,8 @@
   padding: 5vh;
   border-radius: 1vh;
   /* border: 1px solid black; */
-  max-width: 40vh;
-  width: 40vh;
+  max-width: 45vh;
+  width: 45vh;
   z-index: -1;
 }
 
@@ -20,6 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2vh;
 }
 
@@ -27,6 +32,11 @@
   display: flex;
   flex-direction: column;
   gap: 2vh;
+}
+
+.input__form {
+  display: flex;
+  flex-direction: column;
 }
 
 label {
@@ -111,7 +121,6 @@ label {
   text-decoration: underline;
   transform: translateY(-1px);
 }
-
 
 #username-error,
 #password-error {

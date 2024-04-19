@@ -1,3 +1,18 @@
+// CHANGING THE SIGNUP LINK TO LOGIN LINK
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  const signupLink = document.getElementById("signupLink");
+
+  // Check if the current page is login.html
+  if (window.location.pathname.endsWith("login.html")) {
+    signupLink.textContent = "Login";
+    signupLink.href = "login.html";
+  } else if (window.location.pathname.endsWith("signup.html")) {
+    signupLink.textContent = "Login";
+    signupLink.href = "login.html";
+  }
+});
+
 // GETTING SIGNUP BUTTON
 const signupButton = document.getElementById("submit-button");
 // GETTING THE FORM
@@ -70,6 +85,11 @@ const validateSignupForm = (event) => {
   return true;
 };
 
+// ADD EVENT LISTENER TO THE BUTTON
+signupButton.addEventListener("click", (event) => {
+  submitForm(event);
+});
+
 // SUBMIT FORM FUNCTION
 const submitForm = async (event) => {
   event.preventDefault();
@@ -86,7 +106,7 @@ const submitForm = async (event) => {
   const password = document.getElementById("password").value;
 
   // MAKE A REQUEST TO THE SERVER (LOCALHOST)
-  const response = await fetch("http://localhost:5001/signup", {
+  const response = await fetch("http://localhost:5001/client/signup", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -94,13 +114,17 @@ const submitForm = async (event) => {
     body: JSON.stringify({ username, email, password }),
   });
 
-  // GETTING THE RESPONSE FROM THE SERVER
+  // GETTING THE RESPONSE FROM THE SERVER IF THE REQUEST IS SUCCESSFUL
   if (response.ok) {
     const data = await response.json();
     console.log(data.message);
+    alert("Signup Successful! Please Login to continue");
+    window.location.href = "login.html";
   } else {
     const error = await response.json();
     console.error(error.message);
+    alert("Account already exist");
+    window.location.href = "signup.html";
 
     if (response.status === 400) {
       // HANDLE THE DUPLICATE ENTRY ERROR
@@ -108,8 +132,3 @@ const submitForm = async (event) => {
     }
   }
 };
-
-// ADD EVENT LISTENER TO THE BUTTON
-signupButton.addEventListener("click", (event) => {
-  submitForm(event);
-});

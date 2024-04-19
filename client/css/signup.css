@@ -6,13 +6,13 @@ main {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 50%;
+  top: 55%;
   border: 1px solid black;
   padding: 5vh;
   border-radius: 1vh;
   border: 1px solid black;
-  max-width: 40vh;
-  width: 40vh;
+  max-width: 45vh;
+  width: 45vh;
   z-index: -1;
 }
 

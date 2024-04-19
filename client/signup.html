@@ -6,9 +6,11 @@
 
     <!-- ========= LINK CSS ========= -->
 
-    <link rel="stylesheet" href="../client/css/signup.css" />
+    <link rel="stylesheet" href="css/signup.css" />
 
-    <link rel="stylesheet" href="../client/css/header.css" />
+    <link rel="stylesheet" href="css/toast.css" />
+
+    <link rel="stylesheet" href="css/header.css" />
 
     <!-- ========= LINK BOX ICONS ========= -->
 
@@ -23,8 +25,23 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- FontAwesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
     <!-- ======== FAVICON ========  -->
-    <link rel="icon" href="../client/image/book-reader-regular-24(2).png" />
+    <link rel="icon" href="image/book-reader-regular-24(2).png" />
+
+    <!-- ======== NOTYF ========  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
+
+    <!-- ======== NOTYF ========  -->
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 
     <title>Sign Up</title>
   </head>
@@ -34,30 +51,34 @@
     <header>
       <section class="header__container">
         <!-- HAMBURGER AND ICON CONTAINER  -->
-        <div class="image__container">
+
+        <div class="icon__container">
           <div class="hamburger__container" id="hamburger__container">
             <i class="bx bx-menu-alt-left open__nav" id="open__nav"></i>
           </div>
 
           <div class="logo__container">
             <i class="bx bx-book-reader lms__logo"></i>
+            <label>LMS</label>
           </div>
         </div>
 
         <!-- NAV CONTAINER  -->
+        <div class="nav__container__wrapper">
+          <div class="nav__container" id="nav__container">
+            <a class="nav__link" href="index.html">Home</a>
+            <a class="nav__link" href="about.html">About Us</a>
+            <a class="nav__link" href="contact.html">Contact Us</a>
+            <a class="nav__link" href="news_blog.html">News & Blog</a>
+          </div>
 
-        <div class="nav__container" id="nav__container">
-          <a class="nav__link" href="index.html">Home</a>
-          <a class="nav__link" href="about.html">About Us</a>
-          <a class="nav__link" href="contact.html">Contact Us</a>
-          <a class="nav__link" href="news_blog.html">News & Blog</a>
-        </div>
+          <!-- LOGIN AND SIGNUP BUTTONS  -->
 
-        <!-- LOGIN AND SIGNUP BUTTONS  -->
-
-        <div class="login__signup__container">
-          <a class="login__link" href="login.html">Log in</a>
-          <a class="signup__link" href="signup.html">Sign Up</a>
+          <div class="login__signup__container">
+            <div class="login__link__container">
+              <a href="signup.html" id="signupLink">Sign Up</a>
+            </div>
+          </div>
         </div>
       </section>
     </header>
@@ -140,7 +161,8 @@
 
     <!-- JAVASCRIPT ACCESS -->
 
-    <script src="../client/js/signup.js"></script>
-    <script src="../client/js/header.js"></script>
+    <script src="js/signup.js"></script>
+    <script src="js/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
   </body>
 </html>
