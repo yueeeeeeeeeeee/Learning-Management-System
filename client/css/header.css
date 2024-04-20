@@ -5,13 +5,14 @@
 }
 
 header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   background: rgba(45, 45, 45, 0.5);
   backdrop-filter: blur(5px);
   font-weight: var(--Raleway500);
+  z-index: 1;
 }
 
 .icon__container {
@@ -28,7 +29,7 @@ header {
   justify-content: space-between;
   padding: 2vh;
   font-family: "Roboto", sans-serif;
-  margin-inline: 2vh;
+  margin-inline: 5vh;
   color: white;
 }
 
@@ -104,6 +105,7 @@ header {
 .login__link__container > a {
   text-decoration: none;
   color: white;
+  transition: transform 0.15s, color 0.15s;
 }
 
 /* ============ HOVER CSS ============= */
@@ -112,6 +114,12 @@ header {
   color: rgb(202, 214, 31);
   text-decoration: underline;
   transform: translateY(-1px);
+  transform: scale(1.1);
+}
+
+.login__link__container > a:hover {
+  color: rgb(202, 214, 31);
+  transform: scale(1.1);
 }
 
 /* ============= RESPONSIVE DESIGN ============= */

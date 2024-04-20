@@ -1,0 +1,121 @@
+@import url("style.css");
+
+* {
+  /* border: 1px solid black; */
+}
+
+/* =========== FOOTER SECTION ============  */
+
+.footer__main__container {
+  background: hsla(228, 16%, 12%, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 20px 0;
+  font-weight: var(--Raleway500);
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+  color: white;
+  margin-top: auto;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8vh;
+}
+
+/* ===========  FOOTER TITLE ============  */
+
+.footer__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__title p {
+  font-size: 1.5vh;
+  font-weight: var(--Raleway500);
+  line-height: 2;
+  max-width: 50vh;
+  width: 30vh;
+  opacity: 0.8;
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: row;
+  gap: 1vh;
+  margin-bottom: 1vh;
+}
+
+.footer__label {
+  border-bottom: 2px solid var(--DarkGold);
+  width: fit-content;
+}
+
+/* ===========  FOOTER CONTACTS ============ */
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.phone__number,
+.email__address,
+.address {
+  font-size: 1.5vh;
+  font-weight: var(--Raleway500);
+  line-height: 1.5;
+  max-width: 30vh;
+  width: 25vh;
+  opacity: 0.8;
+}
+
+/* ===========  FOOTER LINKS ============  */
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vh;
+}
+
+.footer__links > a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.15s, text-decoration 0.15s;
+  font-size: 1.5vh;
+  font-weight: var(--Raleway500);
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.nav__link:hover {
+  color: rgb(202, 214, 31);
+  text-decoration: underline;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.insta,
+.face,
+.whats {
+  font-size: 3vh;
+  font-weight: var(--Raleway500);
+  opacity: 0.8;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+ /* ========== HOVER CSS ========= */
+
+.insta:hover,
+.face:hover,
+.whats:hover {
+  color: var(--Gold);
+}

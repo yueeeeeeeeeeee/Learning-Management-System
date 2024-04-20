@@ -4,6 +4,10 @@
   /* border: 1px solid black; */
 }
 
+body {
+  background-color: #efefef;
+}
+
 .main__container {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -12,14 +16,17 @@
 }
 
 .top__container {
-  display: flex;
-  gap: 40vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16vh;
+  padding: 1vh;
 }
 
 .title__container {
   display: flex;
   flex-direction: column;
   gap: 2.5vh;
+  margin-top: 2.5vh;
   font-weight: var(--Raleway500);
 }
 
@@ -37,9 +44,10 @@
 
 .home__image__container {
   height: max-content;
-  width: 500px;
+  width: 600px;
   box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.7);
   overflow: hidden;
+  z-index: -1;
 }
 
 .lms__image__container img {
@@ -70,4 +78,87 @@
   background: var(--DarkGold);
   box-shadow: 0 0 10px 0 var(--DarkGold);
   transform: translateY(-0.5vh);
+}
+
+/* =============== CONTACT US =============== */
+
+.contact__main__container {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+.contact__info__container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 20px 0 rgba(45, 45, 45, 0.5);
+  font-family: var(--Raleway);
+  padding: 5vh;
+  width: 100vh;
+  border-radius: 0.5vh;
+}
+
+.contact__label__container {
+  display: flex;
+  flex-direction: row;
+  gap: 5vh;
+  align-items: center;
+}
+
+.name__container,
+.email__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.contact__us__label {
+  font-weight: var(--Raleway700);
+  font-size: 4vh;
+}
+
+.contact__us__label {
+  border-bottom: 2px solid var(--DarkGold);
+  width: fit-content;
+  margin-bottom: 2vh;
+}
+
+.name__label,
+.email__label,
+.message__label {
+  font-size: 1.5vh;
+  font-weight: var(--Raleway600);
+  margin-bottom: 1vh;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+  border-bottom: 2px solid var(--DarkGold);
+}
+
+#username,
+#email {
+  padding: 2vh;
+  margin-bottom: 1vh;
+  border-radius: 0.5vh;
+  border: 1px solid black;
+  width: 42.5vh;
+}
+
+.message__container {
+  display: flex;
+  flex-direction: column;
+}
+
+#message {
+  padding: 2vh;
+  margin-bottom: 1vh;
+  border-radius: 0.5vh;
+  border: 1px solid black;
+  width: max-width;
+  height: 35vh;
+  resize: none;
 }

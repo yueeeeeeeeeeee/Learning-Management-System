@@ -6,6 +6,11 @@
   /* border: 1px solid black; */
 }
 
+main {
+  position: relative;
+  height: 80vh;
+}
+
 .main__container {
   position: absolute;
   transform: translate(-50%, -50%);
