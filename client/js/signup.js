@@ -1,18 +1,3 @@
-// CHANGING THE SIGNUP LINK TO LOGIN LINK
-
-window.addEventListener("DOMContentLoaded", (event) => {
-  const signupLink = document.getElementById("signupLink");
-
-  // Check if the current page is login.html
-  if (window.location.pathname.endsWith("login.html")) {
-    signupLink.textContent = "Login";
-    signupLink.href = "login.html";
-  } else if (window.location.pathname.endsWith("signup.html")) {
-    signupLink.textContent = "Login";
-    signupLink.href = "login.html";
-  }
-});
-
 // GETTING SIGNUP BUTTON
 const signupButton = document.getElementById("submit-button");
 // GETTING THE FORM

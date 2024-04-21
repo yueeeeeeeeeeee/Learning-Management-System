@@ -30,7 +30,7 @@
 .footer__title {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .footer__title p {
@@ -45,6 +45,7 @@
 .footer__logo {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 1vh;
   margin-bottom: 1vh;
 }

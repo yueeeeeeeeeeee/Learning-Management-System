@@ -1,0 +1,65 @@
+@import url("style.css");
+
+* {
+  /* border: 1px solid black; */
+}
+
+.contact__main__container {
+  height: 100%;
+  margin: 11vh;
+  font-family: var(--Raleway);
+}
+
+.contact__second__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #efefef;
+  gap: 5vh;
+  border-radius: 1vh;
+}
+
+.contact__us__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10vh;
+  gap: 20vh;
+}
+
+.by__phone__container,
+.by__email__container,
+.faqs__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1vh;
+}
+
+.faqs__container a {
+  color: black;
+}
+
+.contact-phone,
+.bx-envelope,
+.bx-question-mark {
+  font-size: 5vh;
+  transition: 0.5s;
+}
+
+label {
+  font-weight: var(--Raleway500);
+}
+
+/* ========= HOVER CSS ========= */
+
+.contact-phone:hover,
+.bx-envelope:hover,
+.bx-question-mark:hover {
+  color: var(--DarkGold);
+  cursor: pointer;
+}

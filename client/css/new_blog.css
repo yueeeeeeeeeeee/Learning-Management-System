@@ -1,0 +1,143 @@
+@import url("style.css");
+
+body {
+  background-color: #efefef;
+}
+.swiper__body__container {
+  font-family: var(--Raleway);
+  /* background-color: #efefef; */
+  padding: 5vh 0vh 5vh 0vh;
+}
+
+.swiper__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+}
+
+.swiper__title p {
+  opacity: 0.5;
+  font-weight: var(--Raleway500);
+}
+
+.slide-container {
+  max-width: 130vh;
+  width: 130vh;
+  padding: 40px 0;
+}
+
+.slide-content {
+  margin: 30px 40px 30px 60px;
+  overflow: hidden;
+  border-radius: 0.5vh;
+  width: 90%;
+}
+
+.card {
+  border-radius: 0.5vh;
+  background-color: #fff;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vh;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 35vh;
+}
+
+.image-content {
+  height: 100%;
+  width: 100%;
+  background-color: var(--Dark);
+  border-radius: 1vh;
+}
+
+.card-image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-color: 4px solid var(--DarkGold);
+}
+
+.card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 4px solid;
+  border-color: var(--DarkGold);
+  background: white;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.description__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+  width: 30vh;
+}
+
+.description__container > h2 {
+  font-weight: var(--Raleway700);
+  margin-bottom: 1vh;
+}
+
+.description__container > p {
+  font-size: 1.8vh;
+  opacity: 0.5;
+  text-align: center;
+  line-height: 2.5vh;
+}
+
+.description {
+  font-size: 14px;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.explore__button {
+  /* margin-top: 4.5vh; */
+  font-weight: var(--Raleway500);
+  max-width: max-content;
+  padding: 2vh;
+  border-radius: 0.5vh;
+  border: none;
+  background: var(--Dark);
+  color: white;
+  cursor: pointer;
+  font-size: 2vh;
+  text-decoration: none;
+  font-family: var(--Raleway);
+  box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.7);
+  transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.explore__button:hover {
+  background: var(--DarkGold);
+  box-shadow: 0 0 10px 0 var(--DarkGold);
+  transform: translateY(-0.5vh);
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0px 10px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
+}

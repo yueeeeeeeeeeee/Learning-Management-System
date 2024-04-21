@@ -1,0 +1,59 @@
+@import url("style.css");
+
+/* MANAGED BY JAKE */
+
+.faq__container {
+  height: 70vh;
+  display: grid;
+  gap: 1.5rem;
+  background-color: #efefef;
+  padding: 2vh;
+  border-radius: 0.5vh;
+}
+
+.faq__div__container {
+  border: 1px solid var(--accent);
+}
+
+.faq__div {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin: 1rem 0 0 0.5rem;
+  align-items: center;
+  position: relative;
+  font-size: 0.8rem;
+}
+
+.faq__div {
+  font-weight: var(--Raleway700);
+  font-size: 2vh;
+}
+
+.description__container {
+  font-size: 0.75rem;
+  /* border: 1px solid black; */
+  margin: 1rem 1rem;
+}
+
+.bx-chevron-down {
+  font-size: 3vh;
+  cursor: pointer;
+}
+
+.faq__description {
+  display: none;
+  font-weight: var(--Raleway500);
+  line-height: 2; 
+  font-size: 1.5vh;
+}
+
+@media screen and (min-width: 1024px) {
+  .faq__container {
+    margin: 5rem 0;
+  }
+  .container {
+    max-width: 1024px;
+    margin-inline: auto;
+  }
+}

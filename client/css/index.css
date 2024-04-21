@@ -82,7 +82,7 @@ body {
 
 /* =============== CONTACT US =============== */
 
-.contact__main__container {
+.feedback__main__container {
   /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
@@ -91,7 +91,7 @@ body {
   min-height: 90vh;
 }
 
-.contact__info__container {
+.feedback__info__container {
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.5);
@@ -103,7 +103,7 @@ body {
   border-radius: 0.5vh;
 }
 
-.contact__label__container {
+.feedback__label__container {
   display: flex;
   flex-direction: row;
   gap: 5vh;
@@ -117,12 +117,12 @@ body {
   gap: 1vh;
 }
 
-.contact__us__label {
+.feedback__us__label {
   font-weight: var(--Raleway700);
   font-size: 4vh;
 }
 
-.contact__us__label {
+.feedback__us__label {
   border-bottom: 2px solid var(--DarkGold);
   width: fit-content;
   margin-bottom: 2vh;

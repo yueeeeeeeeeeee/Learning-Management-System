@@ -27,3 +27,25 @@ window.addEventListener("resize", () => {
     menu.style.display = "none";
   }
 });
+
+// Change the text and link of the signup link based on the current page
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  const signupLink = document.getElementById("signupLink");
+
+  // Check if the current page is login.html
+  if (window.location.pathname.endsWith("login.html")) {
+    signupLink.textContent = "Signup";
+    signupLink.href = "signup.html";
+  } else if (
+    window.location.pathname.endsWith("index.html") ||
+    window.location.pathname.endsWith("about.html") ||
+    window.location.pathname.endsWith("contact.html") ||
+    window.location.pathname.endsWith("news.html") ||
+    window.location.pathname.endsWith("news_blog.html") ||
+    window.location.pathname.endsWith("signup.html")
+  ) {
+    signupLink.textContent = "Login";
+    signupLink.href = "login.html";
+  }
+});
