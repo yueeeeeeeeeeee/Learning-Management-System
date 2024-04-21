@@ -1,27 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Raleway:wght@400;500;600;700&display=swap");
 
 @import url("style.css");
-main {
-  position: relative;
-  height: 80vh;
-  /* margin-bottom: 10vh; */
-}
 
-.main__signup__container {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  border: 1px solid black;
-  padding: 5vh;
-  border-radius: 1vh;
-  border: 1px solid black;
-  max-width: 45vh;
-  width: 45vh;
+.signup__main__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   z-index: -1;
 }
 
-.signup__main__container {
+.signup__inner__container {
+  padding: 5vh;
+  max-width: max-content;
+  height: max-content;
+  border-radius: 1vh;
+  border: 1px solid black;
+  gap: 2vh;
+}
+
+.signup__wrap__container {
   display: flex;
   flex-direction: column;
   align-items: center;

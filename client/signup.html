@@ -86,76 +86,78 @@
     <!-- SIGNUP SECTION  -->
 
     <main>
-      <section class="main__signup__container">
-        <div class="signup__main__container">
-          <h1>Registration</h1>
-          <div class="signup__container">
-            <form id="signup-form">
-              <div class="input__container">
-                <label for="name">Username:</label>
+      <section class="signup__main__container">
+        <div class="signup__inner__container">
+          <div class="signup__wrap__container">
+            <h1>Registration</h1>
+            <div class="signup__container">
+              <form id="signup-form">
+                <div class="input__container">
+                  <label for="name">Username:</label>
 
-                <input
-                  type="text"
-                  id="username"
-                  class="input__field"
-                  placeholder="Username"
-                />
-                <p id="username-error">Username is required</p>
+                  <input
+                    type="text"
+                    id="username"
+                    class="input__field"
+                    placeholder="Username"
+                  />
+                  <p id="username-error">Username is required</p>
+                </div>
+
+                <div class="input__container">
+                  <label for="email">Email:</label>
+
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    class="input__field"
+                  />
+
+                  <p id="email-error">Email is required</p>
+                </div>
+
+                <div class="input__container">
+                  <label for="password">Password:</label>
+
+                  <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    class="input__field"
+                  />
+
+                  <p id="password-error">Password is required</p>
+                </div>
+
+                <div class="input__container">
+                  <label for="confirm-password">Confirm Password:</label>
+
+                  <input
+                    type="password"
+                    id="confirm-password"
+                    placeholder="Confirm Password"
+                    class="input__field"
+                  />
+
+                  <p id="confirm-password-error">
+                    Password Confirmation is required
+                  </p>
+                </div>
+              </form>
+
+              <div class="signup__button__container">
+                <input type="submit" id="submit-button" value="Sign Up" />
+                <i
+                  class="bx bxl-google google__icon"
+                  style="color: #2b2323"
+                  title="Sign up using google account"
+                ></i>
+
+                <a href="login.html" class="login__redirect"
+                  >Already have an account?</a
+                >
               </div>
-
-              <div class="input__container">
-                <label for="email">Email:</label>
-
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="Email"
-                  class="input__field"
-                />
-
-                <p id="email-error">Email is required</p>
-              </div>
-
-              <div class="input__container">
-                <label for="password">Password:</label>
-
-                <input
-                  type="password"
-                  id="password"
-                  placeholder="Password"
-                  class="input__field"
-                />
-
-                <p id="password-error">Password is required</p>
-              </div>
-
-              <div class="input__container">
-                <label for="confirm-password">Confirm Password:</label>
-
-                <input
-                  type="password"
-                  id="confirm-password"
-                  placeholder="Confirm Password"
-                  class="input__field"
-                />
-
-                <p id="confirm-password-error">
-                  Password Confirmation is required
-                </p>
-              </div>
-            </form>
-
-            <div class="signup__button__container">
-              <input type="submit" id="submit-button" value="Sign Up" />
-              <i
-                class="bx bxl-google google__icon"
-                style="color: #2b2323"
-                title="Sign up using google account"
-              ></i>
-
-              <a href="login.html" class="login__redirect"
-                >Already have an account?</a
-              >
             </div>
           </div>
         </div>
@@ -172,8 +174,8 @@
             <label class="footer__label">LMS</label>
           </div>
           <p>
-            LMS is a platform where you can learn with each other and share
-            your knowledge with one another without any cost.
+            LMS is a platform where you can learn with each other and share your
+            knowledge with one another without any cost.
           </p>
         </div>
 
