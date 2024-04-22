@@ -82,6 +82,7 @@ const validateSignupForm = (event) => {
     document.getElementById("password-error").style.display = "block";
     document.getElementById("password-error").textContent =
       "Passowrd must contain atleast 8 characters";
+    return false;
   } else if (
     !/(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/.test(password)
   ) {
@@ -118,6 +119,7 @@ const submitForm = async (event) => {
   const username = document.getElementById("username").value;
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
+  const role = "user";
 
   // MAKE A REQUEST TO THE SERVER (LOCALHOST)
   const response = await fetch("http://localhost:5001/client/signup", {
@@ -125,7 +127,7 @@ const submitForm = async (event) => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ username, email, password }),
+    body: JSON.stringify({ username, email, password, role}),
   });
 
   // GETTING THE RESPONSE FROM THE SERVER IF THE REQUEST IS SUCCESSFUL
