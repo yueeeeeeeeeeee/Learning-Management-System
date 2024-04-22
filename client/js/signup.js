@@ -85,11 +85,6 @@ const validateSignupForm = (event) => {
   return true;
 };
 
-// ADD EVENT LISTENER TO THE BUTTON
-signupButton.addEventListener("click", (event) => {
-  submitForm(event);
-});
-
 // SUBMIT FORM FUNCTION
 const submitForm = async (event) => {
   event.preventDefault();
@@ -129,6 +124,12 @@ const submitForm = async (event) => {
     if (response.status === 400) {
       // HANDLE THE DUPLICATE ENTRY ERROR
       console.log(error.message);
+      alert(data.message);
     }
   }
 };
+
+// ADD EVENT LISTENER TO THE BUTTON
+signupButton.addEventListener("click", (event) => {
+  submitForm(event);
+});

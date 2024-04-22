@@ -127,10 +127,18 @@ body {
   transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
 }
 
+/* ============ HOVER CSS ============= */
+
 .explore__button:hover {
   background: var(--DarkGold);
   box-shadow: 0 0 10px 0 var(--DarkGold);
-  transform: translateY(-0.5vh);
+  transform: translateY(-3px);
+}
+/* ============ ACTIVE CSS ============= */
+
+.explore__button:active {
+  background: var(--Gold);
+  transform: scale(0.99);
 }
 
 @media screen and (max-width: 768px) {

@@ -95,7 +95,7 @@ label {
   color: white;
   cursor: pointer;
   font-family: var(--Raleway);
-  transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
+  transition: all 0.15s;
 }
 
 .signup__redirect {
@@ -112,6 +112,11 @@ label {
   transform: translateY(-1px);
 }
 
+.login__button:active {
+  transform: scale(0.99);
+  background: var(--Gold);
+}
+
 .forgot__password:hover {
   color: rgb(202, 214, 31);
   text-decoration: underline;
@@ -124,7 +129,7 @@ label {
   transform: translateY(-1px);
 }
 
-#username-error,
+#email-error,
 #password-error {
   display: none;
   color: red;

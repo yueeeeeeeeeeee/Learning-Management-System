@@ -1,35 +1,58 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-  const loginButton = document.getElementById("login-button");
+const emailError = document.getElementById("email-error");
+const passwordError = document.getElementById("password-error");
 
-  const submitForm = async (event) => {
-    event.preventDefault();
+const submitForm = async (event) => {
+  event.preventDefault();
 
-    // GETTING THE VALUES
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+  // GET THE VALUES FROM THE CLIENT (JSON.stringify)
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-    const response = await fetch("http://localhost:5001/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    });
+  // Regular expression for email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (response.ok) {
-      const data = await response.json();
-      console.log(data.message);
+  // Check if email or password is empty or invalid
+  if (!email || !emailRegex.test(email)) {
+    emailError.textContent = !email ? "Email is required" : "Invalid email format";
+    emailError.style.display = "block";
+    return; // Stop the form submission
+  } else {
+    emailError.style.display = "none";
+  }
 
-      alert("Login Successful! Welcome");
-      window.location.href = "lms_home.html";
-    } else {
-      const error = await response.json();
-      console.error(error.message);
+  if (!password) {
+    passwordError.style.display = "block";
+    return; // Stop the form submission
+  } else {
+    passwordError.style.display = "none";
+  }
 
-      alert("Invalid email or password");
-      window.location.href = "login.html";
-    }
-  };
+  // FETCH REQUEST TO SERVER
+  const response = await fetch("http://localhost:5001/client/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email, password }),
+  });
 
-  loginButton.addEventListener("click", submitForm);
+  // GETTING THE RESPONSE FROM THE SERVER IF THE LOGIN IS MATCHING WITH THE DATA IN DATABASE
+
+  if (response.ok) {
+    const data = await response.json();
+    console.log(data.message);
+    alert("Login successful");
+    window.location.href = "lms_home.html";
+  } else {
+    const text = await response.text();
+    console.log(text);
+    alert("User does not exist or password is incorrect");
+    window.location.href = "login.html";
+  }
+};
+
+const submitButton = document.getElementById("login-button");
+// ADD EVENT LISTENER TO THE BUTTON
+submitButton.addEventListener("click", (event) => {
+  submitForm(event);
 });
