@@ -48,13 +48,14 @@ const userCollection = database.collection("Users");
 app.post("/client/signup", async (req, res) => {
   try {
     // GET THE VALUES FROM THE CLIENT (JSON.stringify)
-    const { username, email, password } = req.body;
+    const { username, email, password, role} = req.body;
 
     // VALIDATE FORM DATA
     if (!username || !email || !password) {
       return res.status(400).json({ message: "Invalid form data" });
+    } else if (role !== "user") {
+      return res.status(400).json({ message: "Invalid role" });
     }
-
     // HASH THE PASSWORD BEFORE SAVING TO DATABASE
     const hashedPasword = await bcrypt.hash(password, 10);
 
@@ -66,6 +67,7 @@ app.post("/client/signup", async (req, res) => {
       username,
       email,
       password: hashedPasword,
+      role,
     });
 
     // CHECK IF THE USER WAS INSERTED SUCCESSFULLY
