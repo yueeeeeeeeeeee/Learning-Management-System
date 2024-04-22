@@ -1,27 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Raleway:wght@400;500;600;700&display=swap");
 
 @import url("style.css");
-main {
-  position: relative;
-  height: 80vh;
-  /* margin-bottom: 10vh; */
-}
 
-.main__signup__container {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  border: 1px solid black;
-  padding: 5vh;
-  border-radius: 1vh;
-  border: 1px solid black;
-  max-width: 45vh;
-  width: 45vh;
+.signup__main__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
   z-index: -1;
 }
 
-.signup__main__container {
+.signup__inner__container {
+  width: 45vh;
+  height: 70vh;
+  border-radius: 1vh;
+  border: 1px solid black;
+  gap: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup__wrap__container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,7 +73,7 @@ label {
   color: white;
   cursor: pointer;
   font-family: var(--Raleway);
-  transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
+  transition: all 0.15s;
 }
 
 .google__icon {
@@ -82,7 +82,7 @@ label {
 
 .login__redirect {
   text-decoration: none;
-  transition: color 0.15s, text-decoration 0.15s, transform 0.15s;
+  transition: all 0.15s;
 }
 
 /* ============ HOVER CSS ============= */
@@ -97,6 +97,14 @@ label {
   background: var(--DarkGold);
   box-shadow: 0 0 10px 0 var(--DarkGold);
   transform: translateY(-1px);
+}
+
+/* ============ ACTIVE CSS ============= */
+
+
+#submit-button:active {
+  transform: scale(0.99);
+  background: var(--Gold);
 }
 
 /* ============= RESPONSIVE DESIGN ============= */

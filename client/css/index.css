@@ -77,7 +77,14 @@ body {
 #getStarted:hover {
   background: var(--DarkGold);
   box-shadow: 0 0 10px 0 var(--DarkGold);
-  transform: translateY(-0.5vh);
+  transform: translateY(-3px);
+}
+
+/* ============ ACTIVE CSS ============= */
+
+#getStarted:active {
+  background: var(--Gold);
+  transform: scale(0.99);
 }
 
 /* =============== CONTACT US =============== */

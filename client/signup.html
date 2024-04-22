@@ -46,11 +46,11 @@
     <title>Sign Up</title>
   </head>
   <body>
-    <!-- HEADER SECTION  -->
+    <!-- =====================  HEADER SECTION =====================   -->
 
     <header>
       <section class="header__container">
-        <!-- HAMBURGER AND ICON CONTAINER  -->
+        <!-- =====================  HAMBURGER AND ICON CONTAINER =====================   -->
 
         <div class="icon__container">
           <div class="hamburger__container" id="hamburger__container">
@@ -63,7 +63,7 @@
           </div>
         </div>
 
-        <!-- NAV CONTAINER  -->
+        <!-- =====================  NAV CONTAINER =====================   -->
         <div class="nav__container__wrapper">
           <div class="nav__container" id="nav__container">
             <a class="nav__link" href="index.html">Home</a>
@@ -72,7 +72,7 @@
             <a class="nav__link" href="news_blog.html">News & Blog</a>
           </div>
 
-          <!-- LOGIN AND SIGNUP BUTTONS  -->
+          <!-- =====================  LOGIN AND SIGNUP BUTTONS =====================   -->
 
           <div class="login__signup__container">
             <div class="login__link__container">
@@ -83,79 +83,81 @@
       </section>
     </header>
 
-    <!-- SIGNUP SECTION  -->
+    <!-- =====================  SIGNUP SECTION =====================  -->
 
     <main>
-      <section class="main__signup__container">
-        <div class="signup__main__container">
-          <h1>Registration</h1>
-          <div class="signup__container">
-            <form id="signup-form">
-              <div class="input__container">
-                <label for="name">Username:</label>
+      <section class="signup__main__container">
+        <div class="signup__inner__container">
+          <div class="signup__wrap__container">
+            <h1>Registration</h1>
+            <div class="signup__container">
+              <form id="signup-form">
+                <div class="input__container">
+                  <label for="name">Username:</label>
 
-                <input
-                  type="text"
-                  id="username"
-                  class="input__field"
-                  placeholder="Username"
-                />
-                <p id="username-error">Username is required</p>
+                  <input
+                    type="text"
+                    id="username"
+                    class="input__field"
+                    placeholder="Username"
+                  />
+                  <p id="username-error">Username is required</p>
+                </div>
+
+                <div class="input__container">
+                  <label for="email">Email:</label>
+
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    class="input__field"
+                  />
+
+                  <p id="email-error">Email is required</p>
+                </div>
+
+                <div class="input__container">
+                  <label for="password">Password:</label>
+
+                  <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    class="input__field"
+                  />
+
+                  <p id="password-error">Password is required</p>
+                </div>
+
+                <div class="input__container">
+                  <label for="confirm-password">Confirm Password:</label>
+
+                  <input
+                    type="password"
+                    id="confirm-password"
+                    placeholder="Confirm Password"
+                    class="input__field"
+                  />
+
+                  <p id="confirm-password-error">
+                    Password Confirmation is required
+                  </p>
+                </div>
+              </form>
+
+              <div class="signup__button__container">
+                <input type="submit" id="submit-button" value="Sign Up" />
+                <i
+                  class="bx bxl-google google__icon"
+                  style="color: #2b2323"
+                  title="Sign up using google account"
+                ></i>
+
+                <a href="login.html" class="login__redirect"
+                  >Already have an account?</a
+                >
               </div>
-
-              <div class="input__container">
-                <label for="email">Email:</label>
-
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="Email"
-                  class="input__field"
-                />
-
-                <p id="email-error">Email is required</p>
-              </div>
-
-              <div class="input__container">
-                <label for="password">Password:</label>
-
-                <input
-                  type="password"
-                  id="password"
-                  placeholder="Password"
-                  class="input__field"
-                />
-
-                <p id="password-error">Password is required</p>
-              </div>
-
-              <div class="input__container">
-                <label for="confirm-password">Confirm Password:</label>
-
-                <input
-                  type="password"
-                  id="confirm-password"
-                  placeholder="Confirm Password"
-                  class="input__field"
-                />
-
-                <p id="confirm-password-error">
-                  Password Confirmation is required
-                </p>
-              </div>
-            </form>
-
-            <div class="signup__button__container">
-              <input type="submit" id="submit-button" value="Sign Up" />
-              <i
-                class="bx bxl-google google__icon"
-                style="color: #2b2323"
-                title="Sign up using google account"
-              ></i>
-
-              <a href="login.html" class="login__redirect"
-                >Already have an account?</a
-              >
             </div>
           </div>
         </div>
@@ -172,8 +174,8 @@
             <label class="footer__label">LMS</label>
           </div>
           <p>
-            LMS is a platform where you can learn with each other and share
-            your knowledge with one another without any cost.
+            LMS is a platform where you can learn with each other and share your
+            knowledge with one another without any cost.
           </p>
         </div>
 

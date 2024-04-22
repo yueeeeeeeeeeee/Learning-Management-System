@@ -100,12 +100,12 @@ header {
   background: hsl(243, 100%, 60%);
   padding: 1vh 1.5vh 1vh 1.5vh;
   border-radius: 0.5vh;
+  transition: all 0.15s;
 }
 
 .login__link__container > a {
   text-decoration: none;
   color: white;
-  transition: transform 0.15s, color 0.15s;
 }
 
 /* ============ HOVER CSS ============= */
@@ -117,9 +117,15 @@ header {
   transform: scale(1.1);
 }
 
-.login__link__container > a:hover {
-  color: rgb(202, 214, 31);
-  transform: scale(1.1);
+.login__link__container:hover {
+  color: rgb(202, 214, 35);
+  cursor: pointer;
+  transform: scale(1);
+}
+
+/* ============ ACTIVE CSS ============= */
+.login__link__container:active {
+  transform: scale(0.97);
 }
 
 /* ============= RESPONSIVE DESIGN ============= */

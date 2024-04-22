@@ -51,10 +51,19 @@
   border-radius: 0.5vh;
   transition: all 0.15s;
   font-size: 2vh;
+  box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.7);
 }
 
+/* ============ HOVER CSS ============= */
+
 #contact__redirect:hover {
-  color: var(--DarkGold);
-  text-decoration: underline;
-  transform: translateY(-0.5vh);
+  background-color: var(--DarkGold);
+  transform: translateY(-3px);
+}
+
+/* ============ ACTIVE CSS ============= */
+
+#contact__redirect:active {
+  background-color: var(--Gold);
+  transform: scale(0.99);
 }

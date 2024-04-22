@@ -6,23 +6,20 @@
   /* border: 1px solid black; */
 }
 
-main {
-  position: relative;
+.login__main__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
   height: 80vh;
 }
 
-.main__container {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  border: 1px solid black;
+.login__inner__container {
   padding: 5vh;
+  width: max-content;
+  border: 1px solid black;
+  height: max-content;
   border-radius: 1vh;
-  /* border: 1px solid black; */
-  max-width: 45vh;
-  width: 45vh;
-  z-index: -1;
 }
 
 .second__container {
@@ -98,7 +95,7 @@ label {
   color: white;
   cursor: pointer;
   font-family: var(--Raleway);
-  transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
+  transition: all 0.15s;
 }
 
 .signup__redirect {
@@ -115,6 +112,11 @@ label {
   transform: translateY(-1px);
 }
 
+.login__button:active {
+  transform: scale(0.99);
+  background: var(--Gold);
+}
+
 .forgot__password:hover {
   color: rgb(202, 214, 31);
   text-decoration: underline;
@@ -127,9 +129,11 @@ label {
   transform: translateY(-1px);
 }
 
-#username-error,
+#email-error,
 #password-error {
   display: none;
   color: red;
   font-size: 1.5vh;
 }
+
+

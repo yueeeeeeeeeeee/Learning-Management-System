@@ -1,3 +1,37 @@
+// CHANGING THE SIGNUP LINK TO LOGIN LINK
+window.addEventListener("DOMContentLoaded", (event) => {
+  const signupLink = document.getElementById("signupLink");
+
+  // Check if the current page is login.html
+  if (window.location.pathname.endsWith("login.html")) {
+    signupLink.textContent = "Login";
+    signupLink.href = "login.html";
+  } else if (window.location.pathname.endsWith("signup.html")) {
+    signupLink.textContent = "Login";
+    signupLink.href = "login.html";
+  }
+});
+
+// SHOW PASSWORD FUNCTIONALITY
+const passwordInput = document.getElementById("password");
+const confirmpasswordInput = document.getElementById("confirm-password");
+
+passwordInput.addEventListener("click", () => {
+  passwordInput.type = "text";
+});
+
+confirmpasswordInput.addEventListener("click", () => {
+  confirmpasswordInput.type = "text";
+});
+
+passwordInput.addEventListener("blur", () => {
+  passwordInput.type = "password";
+});
+
+confirmpasswordInput.addEventListener("blur", () => {
+  confirmpasswordInput.type = "password";
+});
+
 // GETTING SIGNUP BUTTON
 const signupButton = document.getElementById("submit-button");
 // GETTING THE FORM
@@ -70,11 +104,6 @@ const validateSignupForm = (event) => {
   return true;
 };
 
-// ADD EVENT LISTENER TO THE BUTTON
-signupButton.addEventListener("click", (event) => {
-  submitForm(event);
-});
-
 // SUBMIT FORM FUNCTION
 const submitForm = async (event) => {
   event.preventDefault();
@@ -114,6 +143,12 @@ const submitForm = async (event) => {
     if (response.status === 400) {
       // HANDLE THE DUPLICATE ENTRY ERROR
       console.log(error.message);
+      alert(data.message);
     }
   }
 };
+
+// ADD EVENT LISTENER TO THE BUTTON
+signupButton.addEventListener("click", (event) => {
+  submitForm(event);
+});

@@ -11,6 +11,10 @@
   border-radius: 0.5vh;
 }
 
+.faq__title {
+  text-align: center;
+}
+
 .faq__div__container {
   border: 1px solid var(--accent);
 }
@@ -44,7 +48,7 @@
 .faq__description {
   display: none;
   font-weight: var(--Raleway500);
-  line-height: 2; 
+  line-height: 2;
   font-size: 1.5vh;
 }
 

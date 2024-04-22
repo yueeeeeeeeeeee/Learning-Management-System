@@ -87,9 +87,43 @@ app.post("/client/signup", async (req, res) => {
   }
 });
 
-app.listen(5001, () => console.log("Server started on http://localhost:5001"));
+// ================ LOGIN VALIDATION ==================
+
+app.post("/client/login", async (req, res) => {
+  try {
+    // RETRIEVE THE DATA FROM THE DATABASE
+    const user = await client
+      .db("lms-management-system")
+      .collection("Users")
+      .findOne({ email: req.body.email });
+
+    if (user) {
+      // COMPARE THE PASSWORD WITH STORED PASSWORD BY DECRYPTING THE STORED PASSWORD
+      const passwordMatches = await bcrypt.compare(
+        req.body.password,
+        user.password
+      );
+
+      if (passwordMatches) {
+        // PASSWORD IS CORRECT
+        return res.status(200).json({ message: "Password Match" });
+      } else {
+        // PASSWORD IS INCORRECT
+        res.status(401).json({ error: "Failed to insert data" });
+      }
+    } else {
+      // User not found
+      res.status(404).send("User does not exist");
+    }
+  } catch (error) {
+    console.error("Error handling form submission:", error);
+    res.status(500).send({ error: "Internal Server Error" });
+  }
+});
 
 // METHODS TO SEND BACK TO CLIENT
 // res.json({ message: "Signup route" });
 // res.status(200).json({ message: "Signup route" });
 // res.send("Signup route");
+
+app.listen(5001, () => console.log("Server started on http://localhost:5001"));
