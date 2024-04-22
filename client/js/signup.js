@@ -1,5 +1,4 @@
 // CHANGING THE SIGNUP LINK TO LOGIN LINK
-
 window.addEventListener("DOMContentLoaded", (event) => {
   const signupLink = document.getElementById("signupLink");
 
@@ -11,6 +10,26 @@ window.addEventListener("DOMContentLoaded", (event) => {
     signupLink.textContent = "Login";
     signupLink.href = "login.html";
   }
+});
+
+// SHOW PASSWORD FUNCTIONALITY
+const passwordInput = document.getElementById("password");
+const confirmpasswordInput = document.getElementById("confirm-password");
+
+passwordInput.addEventListener("click", () => {
+  passwordInput.type = "text";
+});
+
+confirmpasswordInput.addEventListener("click", () => {
+  confirmpasswordInput.type = "text";
+});
+
+passwordInput.addEventListener("blur", () => {
+  passwordInput.type = "password";
+});
+
+confirmpasswordInput.addEventListener("blur", () => {
+  confirmpasswordInput.type = "password";
 });
 
 // GETTING SIGNUP BUTTON

@@ -1,6 +1,18 @@
 const emailError = document.getElementById("email-error");
 const passwordError = document.getElementById("password-error");
 
+// SHOW PASSWORD FUNCTIONALITY
+const passwordInput = document.getElementById('password');
+
+passwordInput.addEventListener('click', () => {
+  passwordInput.type = 'text';
+});
+
+passwordInput.addEventListener('blur', () => {
+  passwordInput.type = 'password';
+});
+
+
 const submitForm = async (event) => {
   event.preventDefault();
 
@@ -13,7 +25,9 @@ const submitForm = async (event) => {
 
   // Check if email or password is empty or invalid
   if (!email || !emailRegex.test(email)) {
-    emailError.textContent = !email ? "Email is required" : "Invalid email format";
+    emailError.textContent = !email
+      ? "Email is required"
+      : "Invalid email format";
     emailError.style.display = "block";
     return; // Stop the form submission
   } else {
