@@ -82,6 +82,7 @@ const validateSignupForm = (event) => {
     document.getElementById("password-error").style.display = "block";
     document.getElementById("password-error").textContent =
       "Passowrd must contain atleast 8 characters";
+    return false;
   } else if (
     !/(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/.test(password)
   ) {
